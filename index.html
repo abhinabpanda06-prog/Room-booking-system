@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Meeting</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:700&display=swap" rel="stylesheet">
+  <!-- Link to local CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <nav>
+      <span class="burger-menu">&#9776;</span>
+      <span class="prev">&lt;</span>
+      <span class="menu">Menu</span>
+      <span class="next">&gt;</span>
+    </nav>
+    <h1>Book a meeting room</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Room 1</th>
+          <th>Room 2</th>
+          <th>Room 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mon<br>3 Meetings</td>
+          <td>
+            <div class="meeting">
+              <span class="time">10:30–11:30</span>
+              <span class="desc">Daily Standup</span>
+              <span class="people">2 people</span>
+            </div>
+          </td>
+          <td class="na">Free</td>
+          <td>
+            <div class="meeting">
+              <span class="time">2:00–2:30</span>
+              <span class="desc">Sprint Planning</span>
+              <span class="people">5 people</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Tue<br>8 Meetings</td>
+          <td>
+            <div class="meeting">
+              <span class="time">9:00–9:45</span>
+              <span class="desc">Design Huddle</span>
+              <span class="people">4 people</span>
+            </div>
+          </td>
+          <td>
+            <div class="meeting">
+              <span class="time">11:30–1:00</span>
+              <span class="desc">Client Review</span>
+              <span class="people">3 people</span>
+            </div>
+          </td>
+          <td class="na">Free</td>
+        </tr>
+        <tr>
+          <td>Wed<br>No Meetings</td>
+          <td class="na">Free</td>
+          <td class="na">Free</td>
+          <td class="na">Free</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="book-form">
+      <h2>Book a Meeting</h2>
+      <form id="meetingForm">
+        <input type="text" placeholder="Meeting Name" required>
+        <input type="number" placeholder="Day" min="1" max="31" required>
+        <input type="number" placeholder="Month" min="1" max="12" required>
+        <input type="number" placeholder="Year" min="2025" max="2100" required>
+        <input type="number" placeholder="Start Hour" min="0" max="23" required>
+        <input type="number" placeholder="Start Minute" min="0" max="59" required>
+        <input type="number" placeholder="End Hour" min="0" max="23" required>
+        <input type="number" placeholder="End Minute" min="0" max="59" required>
+        <button type="submit">Book</button>
+      </form>
+    </div>
+    <div id="dialog" class="dialog" style="display:none;">
+      <div class="dialog-content">
+        <p>Do you want to BOOK or ADVANCE?</p>
+        <button id="bookBtn">BOOK</button>
+        <button id="advanceBtn">ADVANCE</button>
+      </div>
+    </div>
+  </div>
+  <!-- Link to local JS file -->
+  <script src="script.js"></script>
+</body>
+</html>x
